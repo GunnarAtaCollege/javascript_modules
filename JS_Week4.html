@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    </head>
+
+<body>
+
+<h1>Week 4</h1>
+
+<div id="idHideThis">
+    <p>A paragraph</p>
+    <p>Another paragraph</p>
+</div>
+
+<button id="idBtnHide">Hide Div</button>
+<button id="idBtnShow">Show Div</button>
+
+<script>
+
+    let elementHide = document.getElementById("idBtnHide")
+    let elementShow = document.getElementById("idBtnShow")
+
+    elementHide.addEventListener("click", HideDiv);
+    elementShow.addEventListener("click", ShowDiv);
+
+    function HideDiv() {
+        $("#idHideThis").hide();
+    }
+
+    function ShowDiv(){
+        $("#idHideThis").show();
+    }
+
+</script>
+
+</body>
+</html> 
