@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+        <style>
+           body {background-color: lightgoldenrodyellow} 
+        </style>
+
+    </head>
+
+<body id="idBody">
+
+<h1>Week 4</h1>
+<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p> 
+
+<code>for x = 1 to 10</code>
+
+
+<div id="idHideThis">
+    <p>A paragraph</p>
+    <p>Another paragraph</p>
+</div>
+
+<button id="idBtnHide">Hide Div</button>
+<button id="idBtnShow">Show Div</button>
+
+
+<div>
+<!-- --><label for="ColorSelect">Choose a Color:</label> 
+        <select name="ColorSelect" id="idColorSelect">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+        </select>
+</div>
+  
+
+<script>
+
+    let elementHide = document.getElementById("idBtnHide")
+    let elementShow = document.getElementById("idBtnShow")
+    let elementSelect = document.getElementById("idColorSelect")
+    let elementBody = document.getElementById("idBody")
+
+    elementHide.addEventListener("click", HideDiv);
+    elementShow.addEventListener("click", ShowDiv);
+    elementSelect.addEventListener('change', ChangeBackground)
+
+    function HideDiv() {
+        $("#idHideThis").hide();
+    }
+
+    function ShowDiv(){
+        $("#idHideThis").show();
+    }
+
+    function ChangeBackground(){
+        elementBody.style.background = elementSelect.value;
+    }
+
+
+
+
+</script>
+
+</body>
+</html> 
